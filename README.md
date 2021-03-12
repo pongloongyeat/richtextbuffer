@@ -11,7 +11,7 @@ apply tags as the end-user types.
 - [x] Some sort of method to add `GLib.Regex` with a `Gtk.TextTag`.
     - [ ] Event handler (i.e. for clickable links, etc.)
 - [x] Store tags so they can be used when the text buffer changes.
-- [ ] Dynamically add tags as the text buffer changes.
+- [x] Dynamically add tags as the text buffer changes.
     - [ ] (Optimisation) Don't check the whole thing via regex, only do it during `init ()`.
     - [ ] Check if an existing tag/regex already exists.
 - [ ] Some sane defaults? (i.e. h1–h6, bold, italic, underline, link, highlight)
