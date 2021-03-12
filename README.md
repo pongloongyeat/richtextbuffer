@@ -14,8 +14,8 @@ apply tags as the end-user types.
 - [ ] Dynamically add tags as the text buffer changes.
     - [ ] (Optimisation) Don't check the whole thing via regex, only do it during `init ()`.
     - [ ] Check if an existing tag/regex already exists.
-- [ ] Some sane defaults? i.e. (h1–h6, bold, italic, underline, link, highlight)
-- [ ] Tooltips. Useful for showing links (<kbd>CTRL</kbd>+<kbd>Left-click</kbd> to open link)
+- [ ] Some sane defaults? (i.e. h1–h6, bold, italic, underline, link, highlight)
+- [ ] Tooltips. Useful for showing links (i.e. <kbd>CTRL</kbd>+<kbd>Left-click</kbd> to open link)
 
 ## Building
 
