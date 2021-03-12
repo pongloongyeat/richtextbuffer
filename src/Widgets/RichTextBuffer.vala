@@ -37,6 +37,8 @@ public class Demo.Widgets.RichTextBuffer : Gtk.TextBuffer {
         tag to the latest?
         */
         tags.append (rich_tag);
+
+        changed.connect (init);
     }
 
     /* Apply all tags to existing text. Usually called at start when
