@@ -7,7 +7,7 @@ The purpose of this is to be able to easily create a rich
 `Gtk.TextView` widget with string matching via regex to
 apply tags as the end-user types.
 
-## Feature list:
+## TODOs:
 - [x] Some sort of method to add `GLib.Regex` with a `Gtk.TextTag`.
     - [ ] Event handler (i.e. for clickable links, etc.)
 - [x] Store tags so they can be used when the text buffer changes.
