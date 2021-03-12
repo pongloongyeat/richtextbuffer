@@ -44,12 +44,18 @@ public class Demo.Application : Gtk.Application {
         window.set_default_size (480, 320);
 
         var richtextbuff = new Widgets.RichTextBuffer () {
-            text = "Hello world! This should be highlighted. Type more 'This' keywords below\u2026"
+            text = """Hello world! This is a demo of RichTextBuffer!
+There isn't much but hey at least you can open https://elementary.io/ right?"""
         };
 
-        var tag = richtextbuff.create_tag ("highlight", "background", "orange", null);
-        var regex = new GLib.Regex ("this", GLib.RegexCompileFlags.CASELESS);
-        richtextbuff.add_tag_with_regex (tag, regex);
+        var highlight_tag = richtextbuff.create_tag ("highlight", "background", "orange", null);
+        var highlight_regex = new GLib.Regex ("this", GLib.RegexCompileFlags.CASELESS);
+
+        var link_tag = richtextbuff.create_tag ("link", "foreground", "#268BD2", "underline", Pango.Underline.SINGLE, null);
+        var link_regex = new GLib.Regex ("https?://[\\w.-]*(\\/[\\w-\\d]*)*");
+
+        richtextbuff.add_tag_with_regex (highlight_tag, highlight_regex);
+        richtextbuff.add_tag_with_regex (link_tag, link_regex);
         richtextbuff.init ();
 
         window.add (new Gtk.TextView.with_buffer (richtextbuff));
