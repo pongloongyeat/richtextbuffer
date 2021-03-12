@@ -57,8 +57,6 @@ public class Demo.Application : Gtk.Application {
 		window.show_all ();
     }
 
-
-
     public static int main (string[] args) {
         return new Application ().run (args);
     }
